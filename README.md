@@ -1,11 +1,8 @@
-![그림1](https://user-images.githubusercontent.com/77563814/202142308-614a5630-8757-44f6-bf08-cd388874750d.png)
-
-
 # MUrangE
 
 <aside>
   
-    😃 표정 인식 기반 음악 추천 웹사이트 (MUsic & Emotion)🎵
+    Web service providing music playlist recommendation by detecting face expression (MUsic & Emotion)🎵
   
 </aside>
 
