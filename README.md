@@ -12,18 +12,18 @@
 
 
 
-## UI 기획
+## UI Design
 
 ![image](https://user-images.githubusercontent.com/77563814/193090214-6f6e2ff0-022e-4045-8e94-60dd72965cdd.png)
 
 
 
-## API 설계
+## API Architecture
 
 ![image](https://user-images.githubusercontent.com/77563814/193088956-a0fe2d42-0d9a-4a52-9389-8b8ac3dbcd8e.png)
 
 
 
-## DB 설계
+## DB Architecture
 
 ![newdb](https://user-images.githubusercontent.com/77563814/193088992-321b2c0a-b1bf-4e6e-a0a3-9723bee078ef.png)
