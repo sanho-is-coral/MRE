@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@500;600&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/paginationjs/2.1.4/pagination.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/paginationjs/2.1.4/pagination.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@800&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/header.css">
+</head>
+
+<body>
+<header>
+    <div class="header">
+        <button id="logo_btn" onclick="location.href='/main'" style="text-decoration:none">
+            <img id="logo" src="images/icon.png" alt="icon">
+            <div id="logo_title">murange</div>
+        </button>
+
+<!--        <div id="search">-->
+<!--            <form action="search.html" method="get">-->
+<!--                <input type="search" name="search" placeholder="검색어 입력">-->
+<!--                <input type="submit" value="검색" >-->
+<!--            </form>-->
+<!--        </div>-->
+
+        <div id="feed" >
+            <button id = "login_btn">
+                <a id = "login_link" href="/oauth2/authorization/google" style="text-decoration:none">
+                    Sign in</a>
+            </button>
+        </div>
+    </div>
+</header>
+
+<div class="content">
+    <!-- 1. 상단 : 감정 분석 페이지 이동 -->
+    <section class="banner">
+<!--        <a onclick="location.href='/detection'" target="_blank">-->
+        <a href='detection.html' >
+            <img class="picture" src="images/banner.png" alt="banner">
+        </a>
+    </section>
+
+    <!-- 2. 첫번째 음악 목록 : 감정별 랜덤 -->
+    <section class="playlist__emotion">
+        <div class="topic"></div> <button onclick="getRandom()">새로고침</button>
+        <div class="line"></div>
+        <div id="data-container"></div>
+        <div id="pagination"></div>
+    </section>
+
+    <section class="bottom_nav">
+        <div id="bottom_line"> </div>
+    </section>
+
+</div>
+
+</body>
+<script src="js/main.js" async defer></script>
+<script src="js/paging.js" async defer></script>
+</html>

@@ -1,0 +1,309 @@
+/* Global settiong */
+
+element.style {
+    overflow: hidden;
+}
+:root {
+    /* Color */
+    --color-white: #ffffff;
+    --color-light-white: #eeeeee;
+    --color-dark-white: #bdbdbd;
+    --color-pink: #fe918d;
+    --color-dark-pink: #ff6863;
+    --color-dark-grey: #4d4d4d;
+    --color-grey: #616161;
+    --color-light-grey: #f6f6f6;
+    --color-blue: #73aace;
+    --color-orange: #feb546;
+    --color-black: #000000;
+
+    /* Font size */
+    --font-large: 48px;
+    --font-medium: 28px;
+    --font-regular: 18px;
+    --font-small: 16px;
+    --font-micro: 14px;
+
+    /* Font weight */
+    --weight-bold: 700;
+    --weight-semi-bold: 600;
+    --weight-regular: 400;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+#feed {
+    position: relative;
+    top: -1vh;
+    left: 91vw;
+    width: 10vw;
+}
+
+body {
+    /* height: 100vw; */
+    font-family: 'Poppins', sans-serif;
+    padding: 0;
+    margin: 0;
+    font-size: var(--font-regular);
+}
+
+/*!* Video *!*/
+/*canvas {*/
+/*    position: absolute;*/
+/*    left: 0;*/
+/*    top: 8vh;*/
+/*    z-index: 100;*/
+/*    margin: 0;*/
+/*    !* transform: scaleX(-1); *!*/
+/*}*/
+
+/*video {*/
+/*    object-fit: cover;*/
+/*    margin: 0;*/
+/*    padding: 0;*/
+/*    border: 0;*/
+/*    vertical-align: baseline;*/
+/*}*/
+
+/*.webcam {*/
+/*    z-index: -100;*/
+/*    margin: 0;*/
+/*    justify-content: center;*/
+/*    align-items: center;*/
+/*    position: absolute;*/
+/*    !* transform: scaleX(-1); *!*/
+/*    width: 100vw;*/
+/*    height: 92vh;*/
+/*}*/
+
+ul {
+    list-style: none;
+    padding-left: 1.3vw;
+}
+
+h1 {
+    font-size: var(--font-large);
+    font-weight: var(--weight-bold);
+    /* color: var(--color-black); */
+    margin: 16px 0px;
+}
+
+h2 {
+    font-size: var(--font-medium);
+    font-weight: var(--weight-semi-bold);
+    /* color: var(--color-black); */
+    margin: 8px 0;
+}
+
+h3 {
+    font-size: var(--font-regular);
+    font-weight: var(--weight-regular);
+    color: var(--color-black);
+    margin: 8px 0;
+}
+
+header {
+    position: sticky;
+    background-color: var(--color-dark-grey);
+    height:  10vh;
+    z-index: 500;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+.content {
+    justify-content: center;
+
+    padding: 0;
+    margin: 0;
+}
+
+/* <<<<<<< sooyoungh */
+/* 웹캠 */
+.webcam {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    transform: scaleX(-1);
+}
+
+canvas {
+    width: 100vw;
+    height: 130vh;
+    position: fixed;
+    top:-6vh;
+    right:0vh;
+    transform: scaleX(-1);
+}
+
+video {
+    z-index: -100;
+    /* width: 100vw;
+    min-height: 96vh; */
+    margin: 0 auto;
+    position: fixed;
+    /* background: transparent; */
+    border-radius: 5px;
+    -webkit-transform: scaleX(-1);
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    transform: scaleX(-1);
+    object-fit: cover;
+    filter: FlipH;
+    -ms-filter: "FlipH";
+}
+/*  >>>>>>> master */
+
+
+#emotion {
+    opacity: 90%;
+    margin-left: 6%;
+    margin-top: 10%;
+    background: rgba(249, 249, 249, 0.9);
+    width: 21vw;
+    height: 45vh;
+    float: left;
+    padding: 1%;
+    z-index: 500;
+    font-weight: 550;
+    position: relative;
+}
+
+.ment {
+
+    text-align: center;
+    padding: 2%;
+    margin: 3%;
+}
+
+.ment__emotion {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    padding: 1%;
+    margin: 2%;
+}
+
+.ment__word {
+    text-align: center;
+    margin-left: 15%;
+}
+
+.ment__figure {
+    text-align: center;
+    margin-left: auto;
+    margin-right: 12%;
+
+}
+
+
+/* 중간 : 음악 분석 */
+#detection {
+    opacity: 90%;
+    position: fixed;
+    bottom: 15%;
+    right: 45%;
+    background-color: var(--color-white);
+    padding: 10px;
+    z-index: 500;
+    float: left;
+    margin-top: 40%;
+}
+
+
+/* 오른쪽 : 음악 플레이리스트 */
+#playlist {
+    opacity: 90%;
+    background: rgba(249, 249, 249, 0.9);
+    width: 32vw;
+    height: 89vh;
+    float: right;
+    z-index: 500;
+    padding: 0;
+    position: relative;
+    margin-top: 1vh;
+}
+
+.like {
+    display: inline-flex;
+    width: 25px;
+    height: 25px;
+    position: relative;
+    z-index: 1;
+    /* 좋아요 버튼 위치 변경하고싶을때 사용 */
+    transform: translate(-20px, -80px); 
+  }
+  
+  
+  .like:hover{
+    content: url('../images/hover-like.png');
+  } 
+  
+
+#ment__top {
+    margin-top: 10%;
+    font-size: 20px;
+    font-weight: 550;
+    margin-bottom: 0;
+    font-family: "나눔스퀘어_ac";
+
+}
+
+#ment__mid {
+    margin-top: 0vh;
+    font-size: 20px;
+    font-weight: 550;
+    font-family: "나눔스퀘어_ac";
+}
+
+
+button {
+    border: none;
+    outline: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+#start__button {
+    font-weight: 550;
+    font-size: 25px;
+    font-family: "나눔스퀘어_ac";
+
+}
+
+body {
+    font-family: "나눔스퀘어_ac";
+    font-weight: 500;
+}
+
+.result__music {
+    width: 100%;
+}
+
+.like__pos {
+    display: flex;
+    flex-direction: row;
+}
+
+.like__music {
+    margin-top:7vh;
+    margin-right: 1vw;
+    width: 25px;
+    height: 25px;
+    position: relative;
+    z-index: 1;
+}
+
+.like__music:hover{
+    content: url('../images/hover-like.png');
+}
