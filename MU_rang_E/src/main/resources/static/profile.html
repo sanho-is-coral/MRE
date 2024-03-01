@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <script src="js/profile.js" async defer></script>
+    <script defer src="js/jquery.simple-calendar.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@800&display=swap" rel="stylesheet">
+    <script src="https://apis.google.com/js/platform.js?onload=onLoad" async defer></script>
+    <link rel="stylesheet" href="css/simple-calendar.css">
+    <link rel="stylesheet" href="css/demo.css">
+    <link rel="stylesheet" href="css/profile.css">
+    <link rel="stylesheet" href="css/header.css">
+</head>
+
+<body>
+<header>
+    <div class="header">
+        <button id="logo_btn" onclick="location.href='/main'" style="text-decoration:none">
+            <img id="logo" src="images/icon.png" alt="icon">
+            <div id="logo_title">murange</div>
+        </button>
+
+        <div id="feed" >
+            <button id = "logout_btn">
+                <a id = "logout_link" href="/logout" style="text-decoration:none">
+                    Log out</a>
+            </button>
+        </div>
+    </div>
+</header>
+
+    <div class="content">
+        <!-- 유저 피드 (달력 + 유저 프로필) -->
+        <div style="margin-top: 5vh;" class="feed">
+            <!-- 1. 유저 달력 -->
+            <div id="container" class="calendar-container"></div>
+            <script src="https://code.jquery.com/jquery-2.2.4.min.js"
+                integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+            <script>
+                var $calendar;
+                $(document).ready(function () {
+                    let container = $("#container").simpleCalendar({
+                        fixedStartDay: 0, // begin weeks by sunday
+                        disableEmptyDetails: true
+                    });
+                    $calendar = container.data('plugin_simpleCalendar')
+                });
+            </script>
+            <!-- 2. 유저 프로필 -->
+            <div class="profile">
+                <img id="picture" style="width: 15vw; height: 15vw;" src="images/profile.jpg"
+                     alt="profile">
+                <div id="username"></div>
+                <div id="email"></div>
+            </div>
+
+        </div>
+
+        <!-- 3. 유저의 음악 목록 -->
+        <section class="playlist__emotion">
+            <div class="topic" id="fav">My Fav</div>
+            <div class="line"></div>
+            <ul class="sample">
+            </ul>
+        </section>
+    </div>
+
+</body>
+
+</html>

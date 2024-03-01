@@ -1,0 +1,254 @@
+/* Global settiong */
+:root {
+  /* Color */
+  --color-white: #ffffff;
+  --color-light-white: #eeeeee;
+  --color-dark-white: #bdbdbd;
+  --color-pink: #fe918d;
+  --color-dark-pink: #ff6863;
+  --color-dark-grey: #4d4d4d;
+  --color-grey: #616161;
+  --color-light-grey: #d9d9d9;
+  --color-blue: #73aace;
+  --color-orange: #feb546;
+  --color-black: #000000;
+
+  /* Font size */
+  --font-large: 48px;
+  --font-medium: 28px;
+  --font-regular: 18px;
+  --font-small: 16px;
+  --font-micro: 14px;
+
+  /* Font weight */
+  --weight-bold: 700;
+  --weight-semi-bold: 600;
+  --weight-regular: 400;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+
+#search {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+body {
+  /* height: 100vw; */
+  font-family: 'Poppins', sans-serif;
+  padding: 0;
+  margin: 0;
+  font-size: var(--font-regular);
+}
+
+h1 {
+  font-size: var(--font-large);
+  font-weight: var(--weight-bold);
+  /* color: var(--color-black); */
+  margin: 16px 0px;
+}
+
+h2 {
+  font-size: var(--font-medium);
+  font-weight: var(--weight-semi-bold);
+  /* color: var(--color-black); */
+  margin: 8px 0;
+}
+
+h3 {
+  font-size: var(--font-regular);
+  font-weight: var(--weight-regular);
+  color: var(--color-black);
+  margin: 8px 0;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+.content {
+  /* justify-content: center;
+    text-align: center; */
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+}
+
+section {
+  justify-content: center;
+  text-align: center;
+  margin: 2vh;
+}
+
+.feed {
+  margin-top: 14vh;
+  margin-bottom: 5vh;
+  margin-left: 0;
+  height: 45vh;
+  margin-bottom: 5vh;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+
+/* 1. 유저 달력 */
+#container {
+  width: 40vw;
+  height: 20vh;
+  margin: 0;
+}
+
+/* 2. 유저 프로필 */
+.profile {
+  width: 10%;
+  flex: auto;
+  margin-top: 2vh;
+  margin-left:4vw;
+  display: flex;
+  flex-direction: column;
+}
+
+#picture {
+  margin-left: 1vw;
+  margin-top: 4vh;
+  margin-bottom: 1vh;
+  border-radius: 50%;
+  border: 1px solid #c6c6c6;
+}
+#username {
+  margin-top: 3vh;
+  margin-bottom: 2vh;
+  text-align: center;
+  font-size: 1.5em;
+}
+
+/* 3. 유저의 음악 목록 */
+.playlist {
+  display: flex;
+  flex-direction: column;
+  /*margin-top: 5vh;*/
+  margin: 1%;
+}
+
+.playlist__emotion {
+  margin-top: 12vh;
+  width: 60vw;
+}
+
+/* 음악 개별 */
+.album {
+  width: 10vw;
+  margin: 0.3vw;
+  margin-bottom: 0.5vw;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+.title {
+  text-align: start;
+  margin-top: 0vh;
+  font-size: small;
+  color:black;
+  text-overflow: clip
+
+}
+
+.topic {
+  text-align: left;
+  margin-left: 1vw;
+  font-size: 21px;
+}
+
+.line {
+  height: 0.5px;
+  background-color: #9f9f9f;
+  margin-top: 1vh;
+  margin-bottom: 1vh;
+}
+
+button {
+  border: none;
+  outline: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+
+/*앨범 커버*/
+.playlist {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  display: inline-flex;
+  margin: 1vw;
+  width: 10vw;
+  /*height: 10vw;*/
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  transition:0.8s;
+}
+
+
+.playlist:hover {
+  transform: scale(1.1);
+}
+
+.sub {
+  width: 10vw;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.like {
+  width: 3px;
+  height: 100%;
+  flex-basis: 1vw;
+  margin-top: 1vh;
+  margin-right: 0.3vw;
+  position:relative;
+  display: block;
+}
+
+.like:hover{
+  content: url('../images/hover-like.png');
+}
+.like_toggle {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+} 
+
+/* 스크롤바 */
+::-webkit-scrollbar {
+  width: 12px;
+  /*스크롤바의 너비*/
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--color-dark-white);
+  /*스크롤바의 색상*/
+  border-radius: 50px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: rgba(249, 249, 249, 0.85)
+    /*스크롤바 트랙 색상*/
+}
+
+.calendar-container {
+}

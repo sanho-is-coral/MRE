@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/search.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@500;600&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <script src="js/search.js" async defer></script>
+
+</head>
+
+<body>
+<header>
+    <div class="header">
+        <button id="logo_btn" onclick="location.href='/main'" style="text-decoration:none">
+            <img id="logo" src="images/icon.png" alt="icon">
+            <div id="logo_title">murange</div>
+        </button>
+
+        <div id="search">
+            <form action="search.html" method="get">
+                <input type="search" name="search" placeholder="검색어 입력">
+                <input type="submit" value="검색" >
+            </form>
+        </div>
+
+        <div id="feed" >
+            <button id = "login_btn">
+                <a id = "login_link" href="/oauth2/authorization/google" style="text-decoration:none">
+                    Sign in</a>
+            </button>
+        </div>
+    </div>
+</header>
+
+    <div class="content">
+        <h2 id="ment"></h2>
+        <section class="playlist__emotion">
+            <div class="line"></div>
+            <ul class="result">
+            </ul>
+        </section>
+
+        <section class="bottom_nav">
+            <div id="bottom_line"> </div>
+        </section>
+
+    </div>
+
+</body>
+
+</html>

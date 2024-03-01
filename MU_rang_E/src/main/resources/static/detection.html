@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="js/face-api.min.js"></script>
+    <script defer src="js/detection.js"></script>
+    <title>Document</title>
+    <link rel="stylesheet" href="css/detection.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@500;600&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/header.css">
+    <!--    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.0.0/dist/tf.min.js"></script>-->
+</head>
+
+<body>
+<header>
+    <div class="header">
+        <button id="logo_btn" onclick="location.href='main.html'" style="text-decoration:none">
+            <img id="logo" src="images/icon.png" alt="icon">
+            <div id="logo_title">murange</div>
+        </button>
+
+    </div>
+</header>
+
+<div id="webcam">
+    <video id="video" width="100%" height="99% - 4vh" autoplay muted></video>
+</div>
+
+<div class="content">
+    <!-- 왼쪽 : 감정 분석 후 감정 수치 -->
+    <section id="emotion">
+        <div class="ment" id="id_insert">감정을 분석해 볼게요.</div>
+        <div class="ment" id="emotion_result">Please wait...</div>
+        <div class="ment">
+            <div class="ment__emotion">
+                <div class="ment__word">Sad</div>
+                <div class="ment__figure" id="sad"> 0.000 </div>
+            </div>
+            <div class="ment__emotion">
+                <div class="ment__word">Angry</div>
+                <div class="ment__figure" id="angry"> 0.000 </div>
+            </div>
+            <div class="ment__emotion">
+                <div class="ment__word">Disgusted</div>
+                <div class="ment__figure" id="disgusted"> 0.000 </div>
+            </div>
+            <div class="ment__emotion">
+                <div class="ment__word">Happy</div>
+                <div class="ment__figure" id="happy"> 0.000 </div>
+            </div>
+            <div class="ment__emotion">
+                <div class="ment__word">Surprised</div>
+                <div class="ment__figure" id="surprised"> 0.000 </div>
+            </div>
+            <div class="ment__emotion">
+                <div class="ment__word">Neutral</div>
+                <div class="ment__figure" id="neutral"> 0.000 </div>
+            </div>
+            <div class="ment__emotion">
+                <div class="ment__word">Fearful</div>
+                <div class="ment__figure" id="fearful"> 0.000 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 중간 : 사용자 감정 분석 회면 -->
+    <section id="detection">
+        <div id="detection__frame"></div>
+        <!--            <div id="detection__button" onclick="predict()">기분 분석을 다시 할까요?</div>-->
+        <button id="start__button" onclick="startDetection()">기분 분석하기</button>
+    </section>
+
+    <!-- 오른쪽 : 분석후 플레이리스트 -->
+    <section id="playlist" style="overflow:scroll; height: 90vh">
+        <div class="ment" id="ment__top"> 기분에 맞는 </div>
+        <div class="ment" id="ment__mid"> 추천 플레이리스트 </div>
+        <ul class="result">
+
+        </ul>
+    </section>
+
+</div>
+
+</body>
+
+</html>
